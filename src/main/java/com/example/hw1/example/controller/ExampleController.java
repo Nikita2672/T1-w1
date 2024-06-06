@@ -14,13 +14,17 @@ public class ExampleController {
     private final ExampleService exampleService;
 
     @GetMapping("/method1")
-    public void callMethodMethod1() {
+    public void callMethod1() {
         exampleService.method1();
     }
 
     @GetMapping("/method2")
-    public void callMethodMethod2() {
+    public void callMethod2() {
         exampleService.method2();
     }
 
+    @GetMapping("/method3")
+    public void callMethod3() {
+        exampleService.method3();
+    }
 }

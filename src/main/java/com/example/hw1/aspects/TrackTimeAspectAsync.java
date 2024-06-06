@@ -20,12 +20,12 @@ public class TrackTimeAspectAsync {
     private final MethodExecutionService methodExecutionService;
     private final ThreadLocal<Long> startTimeThreadLocal = new ThreadLocal<>();
 
-    @Before("@annotation(com.example.hw1.annotations.TrackAsyncTime)")
+    @Before("@annotation(com.example.hw1.annotations.TrackTimeAsync)")
     public void beforeCallAtMethod1(JoinPoint jp) {
         startTimeThreadLocal.set(System.currentTimeMillis());
     }
 
-    @After("@annotation(com.example.hw1.annotations.TrackAsyncTime)")
+    @After("@annotation(com.example.hw1.annotations.TrackTimeAsync)")
     public void afterCallAt(JoinPoint jp) {
         Long startTime = startTimeThreadLocal.get();
         if (startTime != null) {

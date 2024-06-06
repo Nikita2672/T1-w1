@@ -19,7 +19,7 @@ public class TrackTimeAspect {
 
     private final MethodExecutionService methodExecutionService;
 
-    private ThreadLocal<Long> startTimeThreadLocal = new ThreadLocal<>();
+    private final ThreadLocal<Long> startTimeThreadLocal = new ThreadLocal<>();
 
     @Pointcut("@annotation(com.example.hw1.annotations.TrackTime)")
     public void callAtMethodCalled() {
